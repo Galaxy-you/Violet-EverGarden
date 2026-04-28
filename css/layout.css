@@ -69,6 +69,16 @@
   background: var(--brand-strong);
 }
 
+.btn.btn-light {
+  background: rgb(255 255 255 / 20%);
+  border-color: rgb(255 255 255 / 60%);
+  color: #fff;
+}
+
+.btn.btn-light:hover {
+  background: rgb(255 255 255 / 32%);
+}
+
 .grid {
   display: grid;
   gap: 1.2rem;

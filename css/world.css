@@ -84,3 +84,39 @@
 .world-card.hidden {
   display: none;
 }
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.extension-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.extension-card img {
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+}
+
+.extension-text {
+  padding: 0.95rem 1rem 1.15rem;
+}
+
+@media (max-width: 980px) {
+  .system-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+}
