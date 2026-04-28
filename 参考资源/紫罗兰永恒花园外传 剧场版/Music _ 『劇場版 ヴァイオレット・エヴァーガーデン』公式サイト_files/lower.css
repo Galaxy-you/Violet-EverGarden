@@ -1,0 +1,2775 @@
+@charset "utf-8";
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Site Contents     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.outBorder {
+	position: relative;
+	min-width: 1200px;
+	border: solid 3px #b39159;
+	z-index: 1;
+}
+.lowerBox {
+	margin: 50px 45px;
+	border: solid 2px #b39159;
+}
+.innerBorder {
+	margin: 2px;
+	border: solid 1px #b39159;
+}
+.lowerDecoTL, .lowerDecoTR, .lowerDecoBL, .lowerDecoBR {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: no-repeat center / 100%;
+}
+.lowerDecoTL {
+	top: 0;
+	left: 0;
+	background-image: url(/img/bg/lowerDecoTL.png);
+}
+.lowerDecoTR {
+	top: 0;
+	right: 0;
+	background-image: url(/img/bg/lowerDecoTR.png);
+}
+.lowerDecoBL {
+	bottom: 0;
+	left: 0;
+	background-image: url(/img/bg/lowerDecoBL.png);
+}
+.lowerDecoBR {
+	bottom: 0;
+	right: 0;
+	background-image: url(/img/bg/lowerDecoBR.png);
+}
+
+
+/*          ページタイトル          */
+.lowerLogo {
+	margin: 0 auto;
+	padding: 70px 0;
+	text-align: center;
+}
+.lowerLogo a {
+	display: block;
+	width: 340px;
+	margin: 0 auto;
+}
+.pageTitleBox {
+	position: absolute;
+	top: auto;
+	left: 0;
+	width: 100%;
+	padding-top: 270px;
+	background: no-repeat center;
+	z-index: -1;
+}
+.pageTitle {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	-webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%);
+}
+.pageTitleVE {
+	position: relative;
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: center; justify-content: center;
+	-webkit-align-items: center; align-items: center;
+	width: 250px;
+	height: 66px;
+	margin: 0 auto;
+	text-align: center;
+	background: rgba(255, 255, 255, .85);
+}
+.pageTitleVE:after {
+	content: "";
+	position: absolute;
+	top: auto;
+	left: auto;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	border: solid 1px rgba(255, 255, 255, .3);
+}
+.pageTitleVE .textSvg {
+	width: 72%;
+	max-width: 180px;
+}
+.lowerWrap {
+	padding: 270px 0 0;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Header Contents     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.navigationBtn, .navigationWrap {
+	background-color: rgba(175, 145, 89, .9);
+}
+.navigationList>li>a:hover {
+	fill: #ffe6bb;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     ニュースコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* カテゴリー */
+.category {
+	display: -webkit-flex; display: flex;
+	-webkit-align-items: stretch; align-items: stretch;
+	-webkit-justify-content: space-between; justify-content: space-between;
+}
+.newsCategory {
+	width: 720px;
+	margin: 120px auto 0;
+}
+.category a {
+	display: block;
+	width: 8em;
+	padding: 10px 5px;
+	margin: 0 0 20px;
+	font-size: 1.6rem;
+	font-weight: 500;
+	text-align: center;
+	background: #FFF;
+	border: 1px #6A6A6A solid;
+	-webkit-transition: .3s ease-out; transition: .3s ease-out;
+}
+.category a:hover {
+	color: #B39159;
+	border: 1px #B39159 solid;
+	text-decoration: none;
+}
+/* ニュース */
+.newsList {
+	padding-top: 80px;
+}
+.newsContentList {
+	padding: 40px;
+	margin: 0 0 40px;
+	background: rgba(255, 255, 255, .6);
+}
+.newsContentHd .data {
+	color: #B39159;
+	font-family: 'Merriweather', serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	font-style: italic;
+}
+.newsContentHd .data span {
+	margin: 0 5px;
+}
+.newsContentHd .data a {
+	color: #B39159;
+}
+.newsTitle {
+	display: block;
+	padding: 20px 0;
+	margin: 0 0 20px;
+	font-size: 2rem;
+	border-bottom: 1px #B39159 solid;
+}
+/* news */
+.newsCtt {line-height: 1.8;}
+.newsCtt p, .newsCtt dl, .newsCtt ul {
+	margin: 10px 0;
+}
+.newsCtt dl dt {
+	margin: 5px 0;
+}
+.newsCtt dl dd {
+	margin-left: 1em;
+}
+.newsCtt img {
+}
+.newsCtt a {
+	color: #B39159;
+	text-decoration: underline;
+}
+.newsCtt a:hover {
+	text-decoration: none;
+}
+/* news pager */
+#pagination .pager {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 40px 0;
+	text-align: center;
+}
+#pagination .pager a {
+	position: relative;
+	display: inline-block;
+	padding: .5em 1em;
+	margin: 0 .5em;
+	font-size: 1.6rem;
+	vertical-align: middle;
+}
+#pagination .pager a:hover,
+#pagination .pager .pager-current a {
+	color: #B39159;
+	text-decoration: none;
+}
+.newsBacklist {
+	display: block;
+	width: 9em;
+	padding: 10px 5px;
+	margin: 40px auto;
+	font-size: 1.6rem;
+	font-weight: 500;
+	text-align: center;
+	background: #FFF;
+	border: 1px #6A6A6A solid;
+	-webkit-transition: .3s ease-out; transition: .3s ease-out;
+}
+.newsBacklist:hover {
+	color: #B39159;
+	border: 1px #B39159 solid;
+	text-decoration: none;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     ストーリーコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.dir-story .outBorder:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: no-repeat 0 17em / cover;
+	opacity: .6;
+	z-index: -2;
+}
+.storyLead01 {
+	margin: 0 auto;
+	text-align: center;
+}
+.storyLead02 {
+	margin: 60px auto 0;
+	text-align: center;
+}
+.storyText {
+	margin: 100px auto 0;
+	text-align: center;
+	font-size: 1.6rem;
+	line-height: 2;
+}
+.storyText p:nth-child(n+2) {
+	margin: 60px auto 0;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     キャラクターコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.character.content {
+	width: 960px;
+}
+.character .box {
+	position: relative;
+}
+.character .box.container {
+	position: relative;
+}
+.character .box .text {
+	position: absolute;
+	width: 320px;
+}
+.character .text {
+	line-height: 1.8;
+}
+.character .box.chara01 .text {
+	top: 40px;
+	right: 35px;
+}
+.character .box.chara02 .text {
+	top: 90px;
+	left: 35px;
+}
+.character .text1 {
+	font-size: 1.6rem;
+}
+.character .text2 {
+	padding: .8em 0 0;
+	font-size: 1.4rem;
+}
+.character .box .name {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 620px;
+	padding: 10px 40px;
+	text-align: center;
+}
+.character .box.chara01 .name {
+	bottom: 0;
+	background: #FFF;
+}
+.character .box.chara02 .name {
+	top: 0;
+	background: #0f0f0f;
+}
+.character .charalist {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+	padding: 110px 0 0;
+}
+.character .charalist li {
+	width: 375px;
+}
+.character .charalist li:nth-child(n + 3) {
+	padding: 50px 0 0;
+}
+.character .charalist .name {
+	padding: 20px 0;
+	border-bottom: 1px solid #b18e57;
+}
+.character .charalist .text {
+	padding: 15px 0 0;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     スタッフ＆キャストコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.staffcast {
+	-webkit-justify-content: center; justify-content: center;
+}
+.cast {
+	margin: 0 120px 0 0;
+}
+.cast .heading {
+	width: 69px;
+}
+.staffcast .heading {
+	width: 75px;
+	margin: 0 30px 0 0;
+}
+.cttStaffCast {
+	-webkit-flex-flow: column; flex-flow: column;
+	width: 100%;
+}
+.cttStaffCast>li {
+	margin: 0 0 40px;
+}
+.cttStaffCast .role {
+	position: relative;
+	font-size: 1.3rem;
+	color: #b39159;
+}
+.cttStaffCast .name {
+	font-size: 1.8rem;
+}
+.cttStaffCast .name span {
+	font-size: 1.3rem;
+}
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     前売券コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.ticketList .cttTicket:nth-child(n+2) {
+	margin: 120px auto 0;
+}
+.ticketTitle {
+	width: 600px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+.ticketImg {
+	position: relative;
+	width: 600px;
+	margin: 50px auto 30px;
+	text-align: center;
+	font-size: 1rem;
+}
+.tkFr1, .tkFr1::after, .tkFr2, .tkFr2::after, .tkFr3, .tkFr3::after, .tkFr4, .tkFr4::after {
+	position: absolute;
+	color: #b39159;
+	background: transparent;
+	border: .1em solid;
+}
+.tkFr1, .tkFr2, .tkFr3, .tkFr4 { width: 7em; height: 7em; }
+.tkFr1::after, .tkFr2::after, .tkFr3::after, .tkFr4::after { content: ""; width: 6.4em; height: 6.4em; }
+.tkFr1, .tkFr1::after { border-bottom:0; border-right:0; }
+.tkFr2, .tkFr2::after { border-bottom:0; border-left:0; }
+.tkFr3, .tkFr3::after { border-top:0; border-left:0; }
+.tkFr4, .tkFr4::after { border-top:0; border-right:0; }
+.tkFr1 { left:0; top:0; }
+.tkFr2 { right:0; top:0; }
+.tkFr3 { right:0; bottom:0; }
+.tkFr4 { left:0; bottom:0; }
+.tkFr1::after { left:.4em; top:.4em; }
+.tkFr2::after { right:.4em; top:.4em; }
+.tkFr3::after { right:.4em; bottom:.4em; }
+.tkFr4::after { left:.4em; bottom:.4em; }
+.ticketData {
+	width: 600px;
+	margin: 30px auto;
+	line-height: 1.7;
+}
+.ticketData>p {
+	font-size: 1.6rem;
+}
+.ticketNote {
+	margin: 20px auto;
+	text-indent: -1em;
+	padding-left: 1em;
+	font-size: 1.4rem;
+}
+.ticketData .ticket_day {
+	font-size: 2.0rem;
+	padding-bottom: 10px;
+}
+.ticketLink {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	width: 600px;
+	margin: 0 auto 120px;
+}
+.ticketLink li {
+	width: 48%;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     音楽コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.musicList .cttMusic {
+	max-width: 600px;
+	margin: auto;
+}
+.musicList .cttMusic {
+	padding: 140px 0 0;
+}
+.musicLink {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	width: 810px;
+	margin: 0 auto 5px;
+}
+.musicTitleBox {
+	text-align: center;
+}
+.musicTitle {
+	margin: 0 auto;
+}
+.musicAr {
+	margin: 50px auto 0;
+}
+.musicJacket {
+	margin: 50px auto 0;
+}
+.musicIndex .music_tex dl:nth-child(n+2) {
+	padding: 1.2em 0 0;
+}
+.musicIndex .music_tex dl dt:nth-child(n+2) {
+	padding-top: .5em;
+}
+.musicIndex .music_tex dl dd {
+	padding-left: 2em;
+}
+.musicTxtBox {
+	padding: 25px 0 0;
+	font-size: 1.6rem;
+	line-height: 24px;
+}
+.music_con p:nth-child(2) {
+	padding: 25px 0 0;
+}
+.music_conTitle {
+	margin: 60px auto 10px 0;
+}
+.musicIndex .music_conTitle {
+	width: 53.5px;
+}
+.musicMV .music_conTitle {
+	width: 117px;
+}
+.musicPriv .music_conTitle {
+	width: 204px;
+}
+.musicComment {
+	margin: 25px 0 0;
+}
+.music_tex {
+	margin: 25px 0 0;
+}
+.music_tex .heading {
+	color: #b39159;
+}
+.music_tex .heading:nth-child(n+2) {
+	margin: 100px 0 0;
+}
+.musicPriv .list {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+}
+.musicPriv .list li {
+	width: 280px;
+}
+.musicPriv .list li:nth-child(n+3) {
+	padding: 40px 0 0;
+}
+.musicPriv .list p {
+	padding: 10px 0 0;
+	font-size: 1.4rem;
+}
+.musicPriv .list li .image {
+	margin-top: 10px;
+	padding: 30px;
+	text-align: center;
+	background: #FFF;
+}
+.musicPriv .list li .image:nth-of-type(2) {
+	margin-top: 0;
+	padding-top: 0;
+}
+.musicPriv .textList:nth-child(n+2) {
+	padding-top: 20px;
+}
+.musicPriv .textList li:nth-child(n+2) {
+	padding-top: .5em;
+}
+.musicNote {
+	margin: 50px auto 0;
+	padding-left: 1em;
+	text-indent: -1em;
+	font-size: 1.4rem;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Blu-ray&DVDコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.cttBddvd {
+	max-width: 600px;
+	margin: auto;
+}
+.bddvdTitleBox {
+	text-align: center;
+}
+.bddvdTitle {
+	margin: 0 auto;
+}
+.bddvdRelease {
+	margin: 50px auto 0;
+}
+.bddvdJacket {
+	margin: 50px auto 0;
+}
+.bddvdNet {
+	margin: 25px auto 0;
+}
+.bddvdNet p {
+	text-align: left;
+	font-size: 1.2rem;
+}
+.bddvdTxtBox {
+	padding: 25px 0 0;
+	font-size: 1.6rem;
+	line-height: 24px;
+}
+.bddvd_conTitle {
+	margin: 60px auto 10px 0;
+}
+.bddvdSg .bddvd_conTitle {
+	width: 185px;
+}
+.bddvdSgMov .bddvd_conTitle {
+	width: 231.5px;
+}
+.bddvdSgVoi .bddvd_conTitle {
+	width: 233px;
+}
+.bddvdSgSpe .bddvd_conTitle {
+	width: 227px;
+}
+.bddvdSgOth .bddvd_conTitle {
+	width: 60px;
+}
+.bddvdPriv .bddvd_conTitle {
+	width: 205px;
+	margin-top: 120px;
+}
+.bddvd_tex {
+	margin: 25px 0 0;
+}
+.bddvd_tex>ul .secondary {
+	margin-left: 1em;
+}
+.bddvd_tex>ul .secondary li {
+	font-size: 1.4rem;
+}
+.bddvdDolby {
+	margin: 25px 0 0;
+	border: 1px solid #b39159;
+}
+.bddvdDolby .box {
+	margin: 7px;
+	padding: 30px 1em;
+	border: 1px solid #b39159;
+}
+.bddvdDolby .text1 {
+	padding-top: 2em;
+}
+.bddvdDolby .text2 {
+	padding-top: 2em;
+	font-weight: 500;
+}
+.bddvdDolby .text3 {
+	padding-bottom: 2em;
+}
+.bddvdDolby .text4 {
+	font-size: 1.4rem;
+}
+.bddvdPriv .list {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+}
+.bddvdPriv .list li {
+	width: 280px;
+}
+.bddvdPriv .list li:nth-child(n+3) {
+	padding: 40px 0 0;
+}
+.bddvdPriv .list li a {
+	color: #b39159;
+	text-decoration: underline;
+}
+.bddvdPriv .list li a:hover {
+	text-decoration: none;
+}
+.bddvdPriv .list p {
+	padding: 10px 0 0;
+	font-size: 1.4rem;
+}
+.bddvdPriv .list li .image {
+	margin-top: 10px;
+	/*padding: 30px;*/
+	text-align: center;
+	background: #FFF;
+}
+.bddvdPriv .list li .image:nth-of-type(2) {
+	margin-top: 0;
+	padding-top: 0;
+}
+.bddvdPriv .textList:nth-child(n+2) {
+	padding-top: 20px;
+}
+.bddvdPriv .textList li:nth-child(n+2) {
+	padding-top: .5em;
+}
+.bddvdPriv .cheer {
+	margin: 80px 0 0;
+}
+.bddvdPriv .cheer .heading{
+	color: #b39159;
+}
+.bddvdPriv .cheer .comm {
+	margin: 25px 0 0;
+	padding: 30px;
+	text-align: center;
+	background: #FFF;
+	border:1px solid #b39159;
+}
+.bddvdPriv .cheer .comm p {
+	padding-bottom: .8em;
+	font-size: 1.8rem;
+	color: #b39159;
+}
+.bddvdPriv .cheer .comm .image {
+	width: 280px;
+	margin: 0 auto;
+}
+.bddvdPriv .cheer .cheerList li {
+	padding-top: .5em;
+}
+.bddvdPriv .cheer .cheerList a {
+	color: #b39159;
+	text-decoration: underline;
+}
+.bddvdPriv .cheer .cheerList a:hover {
+	text-decoration: none;
+}
+.bddvdNote {
+	margin: 50px auto 0;
+	padding-left: 1em;
+	text-indent: -1em;
+	font-size: 1.4rem;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     グッズコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.goodsTitle {
+	text-align: center;
+}
+.goodsNote {
+	margin: 80px 0 0;
+	padding-left: 1em;
+	text-indent: -1em;
+	line-height: 1.6;
+}
+.goodsNote .red {
+	padding: 0 0 1rem;
+}
+.goodsNote a {
+	text-decoration: underline;
+}
+.goodsNote a:hover {
+	text-decoration: none;
+}
+.goodsNote .cancel {
+	text-decoration: line-through;
+}
+.goodsOriginList {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+	width: 860px;
+	margin: 30px auto 0;
+}
+.goodsPamphlet .goodsOriginList {
+	display: block;
+}
+.goodsOriginList>li {
+	width: 400px;
+	margin: 60px 0 0;
+}
+.goodsPamphlet .goodsOriginList>li {
+	width: 100%;
+}
+.goodsOriginList .work {
+	padding: 15px 0 0;
+}
+.goodsOriginList .name {
+	padding: 15px 0 0;
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: #b39159;
+}
+.goodsOriginList .detail {
+	padding: 15px 0 0;
+}
+.goodsOriginList .count3 {
+	padding-left: 3em;
+	text-indent: -3em;
+	word-break: break-all;
+}
+.goodsOriginList .count4 {
+	padding-left: 4em;
+	text-indent: -4em;
+	word-break: break-all;
+}
+.goodsOriginList .count5 {
+	padding-left: 5em;
+	text-indent: -5em;
+	word-break: break-all;
+}
+.goodsPamphlet a {
+	color: #B39159;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     入場者プレゼントコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.noveltyTitleBox {
+	text-align: center;
+}
+.cttNovelty {
+	max-width: 600px;
+	margin: auto;
+	padding: 140px 0 0;
+}
+.cttNovelty:first-child {
+	padding: 0;
+}
+.noveltyTitle {
+	padding: 30px 0 0;
+}
+.noveltyImage {
+	padding: 40px 0 0;
+}
+.noveltyTxtBox {
+	padding: 40px 0 0;
+	line-height: 1.7;
+}
+.noveltyTxtBox .novelty_conTitle {
+	padding-bottom: 1em;
+}
+.noveltyTxtBox .priv .novelty_conTitle {
+	width: 93px;
+}
+.noveltyTxtBox .priv .text {
+	font-size: 2.0rem;
+}
+.noveltyTxtBox .priv .text span {
+	font-size: 1.6rem;
+}
+.noveltyTxtBox .priv .list {
+	padding: 1.5em 0 0;
+	font-size: 1.6rem;
+}
+.noveltyTxtBox .period .novelty_conTitle {
+	width: 90.5px;
+	padding-top: 55px;
+}
+.noveltyTxtBox .period .text {
+	font-size: 1.6rem;
+}
+.noveltyTxtBox .period .text span, .noveltyTxtBox .priv .text span.small {
+	font-size: 1.4rem;
+}
+hr.noveltyLine {
+	border-top: 1px solid #b39159;
+	margin: 80px 0;
+}
+.noveltyTxtBox .note {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.novelty .theaterLink {
+	padding: 30px 0 0;
+	font-size: 1.6rem;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     動画コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.movieBox {
+	width: 750px;
+	margin: auto;
+}
+.movieBox p {
+	font-size: 2.4rem ;
+	text-align: center;
+	padding-top: 20px;
+}
+.movieBox div {
+	padding-bottom: 120px;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     書籍コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.booksEA_box {
+	text-align: center;
+}
+.booksDayImage {
+	margin: 40px 0 0;
+}
+.booksImage {
+	width: 330px;
+	margin: 50px auto 160px;
+}
+.booksTitleImage {
+	text-align: center;
+}
+.booksJacket {
+	padding-top: 50px;
+	text-align: center;
+}
+.booksTxtBox {
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 35px;
+	font-size: 1.6rem;
+	line-height: 24px;
+}
+.books_conTitle {
+	margin: 60px auto 10px 0;
+}
+.bookstxt {
+	padding-bottom: 80px;
+}
+.booksBox .list .secondary {
+	margin-left: 1em;
+}
+.booksBox .list .secondary li {
+	font-size: 1.4rem;
+}
+.booksBox1 {
+	text-align: center;
+}
+.booksBox1 .booksTxtBox {
+	padding-top: 50px;
+}
+.bookstxt .url {
+	padding-top: 1em;
+}
+.booksImgBox {
+	width: 550px;
+	margin: auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding-bottom: 60px;
+}
+.booksImgBox li {
+	width: 256px;
+}
+.booksImgBox li img {
+	width: 250px;
+}
+.booksImgBox li p {
+	padding-top: 5px;
+}
+.booksSale .books_conTitle, .booksIndex .books_conTitle {
+	max-width: 93px;
+}
+.booksIntro .books_conTitle {
+	max-width: 164px;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     スペシャルコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.specialTitle {
+	font-size: 2.8rem;
+	margin: 0 auto 30px;
+	text-align: center;
+    border-bottom: 1px #C8D1D1 solid;
+    padding-bottom: 20px;
+}
+.specialSubTitle {
+	font-size: 2.3rem;
+	text-align: center;
+	padding-bottom: .6em;
+}
+.specialIntro {
+	font-size: 1.6rem;
+	margin: 0 auto 60px;
+}
+.special01 .specialIntro{
+	width: 710px;
+}
+.iconImg {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+	width: 720px;
+	margin: auto;
+}
+.iconImg li {
+	width: 150px;
+	margin: 0 0 40px;
+}
+.specialBox {
+	width: 880px;
+	margin: auto;
+	display: -webkit-flex;display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+	padding: 0 0 45px;
+}
+.specialBox li {
+	width: 425px;
+}
+.specialBox li:nth-child(n + 3) {
+	padding: 45px 0 0;
+}
+.specialBox li .text {
+	height: 90px;
+	background-color: #e8e3d7;
+	padding: 20px;
+}
+.specialBox li .text p {
+	font-size: 1.6rem;
+}
+/*+-+-+-+-+-+-+-+-+-+-     comment     -+-+-+-+-+-+-+-+-+-+*/
+.comment {
+	width: 881px;
+	text-align: center;
+}
+/*+-+-+-+-+-+-+-+-+-+-     interview     -+-+-+-+-+-+-+-+-+-+-*/
+.interviewTi {
+	border-bottom: 0;
+	margin: 0 auto 60px;
+}
+.interview {
+	width: 735px;
+	text-align: left;
+	margin: auto;
+}
+.interviewBox {
+	padding-bottom: 80px;
+	width: 740px;
+	margin: auto;
+	line-height: 24px;
+}
+.interviewBox .title {
+	font-size: 2.0rem;
+	color: #B39159;
+	padding-bottom: 30px;
+}
+.interviewBox .txt {
+	font-size: 1.6rem;
+}
+.interviewBox .img {
+	padding-top: 30px;
+}
+.interviewBox .last {
+	font-size: 1.4rem;
+	text-align: right;
+}
+.interview_KV_box {
+	padding: 120px 0 30px;
+}
+.interview_KV_box p {
+	font-size: 1.6rem;
+	padding-top: 20px;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-     ライデンシャフトリヒ・タイムス     -+-+-+-+-+-+-+-+-+-+-*/
+.newspaper {
+	width: 710px;
+	margin: 50px auto 0;
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+.newspaper .image {
+	margin: 0 auto;
+	text-align: center;
+}
+.newspaper .image01 {
+	width: 100%;
+	max-width: 450px;
+	padding: 1em 0;
+}
+.newspaper .text01 p {
+	padding: 1.5em 0 0;
+}
+.newspaper .text02 {
+	padding: 3em 0 0;
+}
+.newspaper .image02 {
+	padding-top: 2em;
+}
+.newspaper .overview {
+	padding: 1em 0 0;
+	text-align: center;
+}
+.newspaper .overview li:first-child {
+	font-weight: bold;
+}
+.newspaper .overview .download a {
+	display: block;
+	width: 170px;
+	margin: .5em auto 0;
+}
+.newspaper .overview .download p {
+	font-size: 1.3rem;
+}
+.newspaper .note {
+	padding-top: 3em;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.newspaper .jpver {
+	padding: 7em 0 0;
+}
+.newspaper .jpver .heading .small {
+	font-size: 1.3rem;
+}
+.newspaper .jpver .heading p {
+	font-weight: bold;
+}
+.newspaper .image03 {
+	width: 248px;
+	padding-top: 2em;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-     カウントダウンコメント     -+-+-+-+-+-+-+-+-+-+-*/
+.countdownList>li {
+	width: 700px;
+	margin: 60px auto 0;
+	padding: 40px 50px;
+	font-size: 1.6rem;
+	line-height: 2;
+	background: rgba(255,255,255,.9);
+}
+.countdownList>li .name, .countdownList>li .img {
+	padding: 0 0 25px;
+	text-align: center;
+}
+.countdownList>li.comment09 .img {
+	padding-top: 25px;
+}
+.countdownList>li.comment09 p, .countdownList>li.comment11 p {
+	padding: 0 0 1.2em;
+}
+.countdownList>li.comment09 .ps {
+	display: -webkit-flex; display: flex;
+}
+.countdownList>li.comment09 p.itl {
+	font-style: italic;
+}
+.countdownList>li.comment11 p.signature {
+	text-align: right;
+}
+.countdownList>li.comment11 p.signature .small {
+	font-size: .8em;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-     バーチャル背景     -+-+-+-+-+-+-+-+-+-+-*/
+.virtualBg {
+	padding: 0 0 45px;
+}
+.virtualBg .intro .text {
+	font-size: 1.6rem;
+}
+.virtualBg .intro .note {
+	padding-top: 1.5em;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.virtualBg .box {
+	padding: 60px 0 0;
+}
+.virtualBg .heading {
+	padding: 0 0 20px;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+.virtualBgList {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: space-between; justify-content: space-between;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+}
+.virtualBgList li {
+	width: 260px;
+}
+.virtualBgList li:nth-child(n + 4) {
+	padding: 30px 0 0;
+}
+.virtualBgList li .thumb {
+	padding: 10px 0;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-     舞台挨拶レポート     -+-+-+-+-+-+-+-+-+-+-*/
+.greeting {
+	width: 740px;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+.greeting .note {
+	padding-left: 1em;
+	padding-bottom: 1em;
+	text-indent: -1em;
+}
+.greeting .heading {
+	padding-top: 4em;
+	font-weight: 500;
+}
+.greeting .pd1 {
+	padding-top: 1em;
+}
+.greeting .pd1-2 {
+	padding-top: 1.2em;
+}
+.greeting .pd2 {
+	padding-top: 2em;
+}
+.greeting .pd4 {
+	padding-top: 4em;
+}
+.greeting .pdti3 {
+	padding-left: 3em;
+	text-indent: -3em;
+}
+.greeting .pdti1 {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.greeting .right {
+	text-align: right;
+}
+.greeting .textLink {
+	padding-top: 3em;
+}
+.greeting .textLink a {
+	display: block;
+	padding: 1em 2em;
+	border: 1px solid #B39159;
+	color: #B39159;
+}
+.greeting .textLink a span {
+	font-weight: 500;
+	text-decoration: underline;
+}
+.greeting .textLink a:hover span {
+	text-decoration: none;
+}
+.greeting .name {
+	font-weight: 500;
+}
+.greeting .ishidate {
+	color: #ad8440;
+}
+.greeting .ogawa {
+	color: #416fab;
+}
+.greeting .yoneda {
+	color: #c75a9d;
+}
+.greeting .shinohara {
+	color: #4d6e34;
+}
+.greeting .funamoto {
+	color: #8c4835;
+}
+.greeting .yamamoto {
+	color: #77418c;
+}
+.greeting .saito {
+	color: #416fab;
+}
+.greeting .hatta {
+	color: #4d6e34;
+}
+.greeting .suzuki {
+	color: #8c4835;
+}
+.greeting .evan, .greeting .imazuka {
+	color: #77418c;
+}
+.greeting .mc {
+	color: #292929;
+	font-weight: 500;
+}
+.greeting .text a {
+	color: #B39159;
+	text-decoration: underline;
+}
+.greeting a:hover {
+	text-decoration: none;
+}
+.greeting .mcName {
+	text-align: right;
+}
+.greeting .box {
+	margin: 2em auto;
+	padding: 1.5em 1em;
+	border: 1px solid #B39159;
+}
+.greeting .yt {
+	margin-top: 2em;
+}
+.greetingCom {
+	vertical-align: super;
+	font-size: .7em;
+}
+.greeting .imgList {
+	display: -webkit-flex; display: flex;
+	gap: 20px;
+}
+.dolby .addition {
+	margin-top: 8em;
+	font-size: 1.4rem;
+	border-top: 1px solid #C8D1D1;
+}
+.dolby .commentsList {
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-     制作風景     -+-+-+-+-+-+-+-+-+-+-*/
+.making.greeting {
+	width: 701px;
+}
+.making video {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+.making.greeting .heading {
+	padding-top: 6em;
+	font-size: 1.8rem;
+	color: #B39159;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-     オーケストラコンサート     -+-+-+-+-+-+-+-+-+-+-*/
+.orchestra h3 {
+	padding: 120px 0 50px;
+	text-align: center;
+}
+.orchestra .cancel {
+	text-decoration: line-through;
+}
+.orchestra .box {
+	background: #ededed;
+}
+.orchestra .container .box:nth-child(n + 3) {
+	margin: 50px 0 0;
+}
+.orchestra .container .octBox {
+	padding: 50px 0 0;
+}
+.orchestra .box.darkRed {
+	border: 1px solid #b75362;
+}
+.orchestra .box.brown {
+	border: 1px solid #b39159;
+}
+.orchestra .box h4 {
+	padding: 1em;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: 500;
+	letter-spacing: 1.8px;
+	color: #FFF;
+}
+.orchestra .box.darkRed h4 {
+	background: #b75362;
+}
+.orchestra .box.brown h4 {
+	background: #b39159;
+}
+.orchestra .linkBoxList .linkBox:nth-child(n + 2) {
+	padding: 30px 0 0;
+}
+.orchestra .linkBox {
+	text-align: center;
+}
+.orchestra .linkBox img {
+	vertical-align: unset;
+}
+.orchestra .linkBox a {
+	display: inline-block;
+	padding: 5px;
+}
+.orchestra .linkBox.darkRed a {
+	background: #b75362;
+}
+.orchestra .linkBox.darkRedInv a {
+	background: #FFF;
+	border: 1px solid #b75362;
+}
+.orchestra .linkBox.brown a {
+	background: #b39159;
+}
+.orchestra .linkBox.brown2 a {
+	background: #8a672f;
+}
+.orchestra .linkBox a p {
+	padding: .8em 1.6em;
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+.orchestra .linkBox.darkRedInv a p {
+	border-color: #b75362;
+	color: #b75362;
+}
+.orchestra .noticeRed {
+	color: #b75362;
+}
+.dir-orchestra .lowerLogo.pc, .dir-orchestraGuideline .lowerLogo.pc, .dir-orchestraReport .lowerLogo.pc {
+	display: none;
+}
+.cttOrchestra {
+	width: 840px;
+	margin: 0 auto 60px;
+	padding: 120px 0 60px;
+}
+.orchestra .bd .box {
+	padding: 60px 0 100px;
+}
+.orchestra .bd .overview {
+	text-align: center;
+}
+.orchestra .bd .release {
+	padding: 40px 0;
+}
+.orchestra .bd .detail {
+	padding: 0 80px;
+}
+.orchestra .bd .detail.greeting {
+	width: 100%;
+}
+.orchestra .bd .detail .list:first-child {
+	padding-top: 40px;
+}
+.orchestra .bd .detail .list:nth-child(n + 2) {
+	padding-top: 2em;
+}
+.orchestra .intro {
+	position: relative;
+	padding: 60px 0 0;
+}
+.orchestra .intro .linkBox {
+	padding: 40px 0 0;
+	font-size: 2.2rem;
+}
+.orchestra .intro .linkBox a {
+	width: 680px;
+}
+.orchestra .intro .linkBox a:hover {
+	text-decoration: none;
+}
+.orchestra .ocNews .box {
+	width: 100%;
+	padding: 50px 25px 50px 50px;
+}
+.orchestra .ocNews .list {
+	/*height: 250px;*/
+	height: 170px;
+	overflow-y: auto;
+}
+.orchestra .ocNews .list li {
+	margin: 0 1.5em 2em 0;
+	padding: 0 0 .5em;
+	border-bottom: 1px solid #242424;
+}
+.orchestra .ocNews .list time {
+	display: block;
+	margin: 0 0 5px;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #b75362;
+}
+.orchestra .ocNews .list::-webkit-scrollbar {
+	width: 12px;
+}
+.orchestra .ocNews .list::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #e8acb5;
+}
+.orchestra .ocNews .list::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background:#b75362;
+}
+.orchestra .ocInfo .notice {
+	text-align: center;
+	font-size: 1.6rem;
+	color: #b75362;
+}
+.orchestra .ocInfo .box.darkRed {
+	margin-top: 20px;
+}
+.orchestra .ocInfo .list {
+	padding: 40px 80px;
+}
+.orchestra .ocInfo .list li {
+	display: -webkit-flex; display: flex;
+	font-size: 1.6rem;
+}
+.orchestra .ocInfo .list li:nth-child(n + 2) {
+	margin: 1em 0 0;
+}
+.orchestra .ocInfo .box .list li .item {
+	height: 2.2em;
+	padding: .3em 1em;
+	white-space: nowrap;
+	font-weight: 500;
+	color: #FFF;
+}
+.orchestra .ocInfo .box.darkRed .list li .item {
+	background: #b75362;
+}
+.orchestra .ocInfo .box.brown .list li .item {
+	background: #b39159;
+}
+.orchestra .ocInfo .box .list li .detail {
+	padding: .3em 0 0 1em;
+}
+.orchestra .ocInfo .box .list li .detail .note {
+	display: inline-block;
+	text-indent: -1em;
+	padding-left: 1em;
+	font-size: 1.4rem;
+}
+.orchestra .ocInfo .box .list li .fb {
+	font-weight: 500;
+}
+.orchestra .ocInfo .box .list li .pd {
+	display: block;
+	padding-top: 10px;
+}
+.orchestra .box .explan .note {
+	padding-left: 1em;
+	text-indent: -1em;
+	line-height: 1.7;
+}
+.orchestra .note a {
+	color: #b39159;
+	text-decoration: underline;
+}
+.orchestra .note a:hover {
+	text-decoration: none;
+}
+.orchestra .inner {
+	width: 680px;
+	margin: 0 auto;
+	padding: 40px 0 60px;
+}
+.orchestra .ocTicket .overview .name {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 500;
+}
+.orchestra .ocTicket .overview .picture {
+	margin: 35px 0 0;
+	padding: 40px 30px;
+	background: #FFF;
+}
+.orchestra .ocTicket .overview .imgText {
+	text-align: center;
+}
+.orchestra .ocTicket .overview .img {
+	width: 420px;
+	margin: 0 auto;
+	padding: 20px 0 0;
+	text-align: center;
+}
+.orchestra .ocTicket .overview .note {
+	padding-top: 1.5em;
+}
+.orchestra .ocTicket #ticket3 .overview .note {
+	padding-top: 40px;
+}
+.orchestra .box.darkRed .explan h5 {
+	margin: 0 0 20px;
+	padding: .8em 0;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 500;
+	letter-spacing: 1.8px;
+	border: 1px solid #b75362;
+	color: #b75362;
+	background: #FFF;
+}
+.orchestra .box .explan {
+	padding: 60px 0 0;
+}
+.orchestra .box .explan .chart {
+	border-width: 1px;
+	border-style: solid;
+}
+.orchestra .box.darkRed .explan .chart {
+	border-color: #b75362;
+}
+.orchestra .box.brown .explan .chart {
+	border-color: #b39159;
+}
+.orchestra .box .explan .chart1 {
+	margin: 0;
+}
+.orchestra .box .explan .chart2 {
+	margin: 60px 0 0;
+}
+.orchestra .box .explan .chart dl {
+	display: -webkit-flex; display: flex;
+	min-height: 6.5em;
+}
+.orchestra .box .explan .chart dl:nth-child(n + 2) {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.orchestra .box.darkRed .explan .chart dl:nth-child(n + 2) {
+	border-top-color: #b75362;
+}
+.orchestra .box.brown .explan .chart dl:nth-child(n + 2) {
+	border-top-color: #b39159;
+}
+.orchestra .box .explan .chart dt {
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: center; justify-content: center;
+	-webkit-align-items: center; align-items: center;
+	width: 130px;
+	padding: 0 1em;
+	text-align: center;
+	font-weight: 500;
+	color: #FFF;
+}
+.orchestra .box .explan .chart dd {
+	display: -webkit-flex; display: flex;
+	-webkit-align-items: center; align-items: center;
+	width: 550px;
+	padding: 0 1em;
+	background: #FFF;
+}
+.orchestra .box.darkRed .explan .chart dl:nth-child(odd) dt {
+	background: #b75362;
+}
+.orchestra .box.darkRed .explan .chart dl:nth-child(even) dt {
+	background: #8c3f4b;
+}
+.orchestra .box.brown .explan .chart dl:nth-child(odd) dt {
+	background: #b39159;
+}
+.orchestra .box.brown .explan .chart dl:nth-child(even) dt {
+	background: #8a672f;
+}
+.orchestra .ocTicket #ticket3.brown .explan .chart dl:nth-child(odd) dt {
+	background: #8a672f;
+}
+.orchestra .ocTicket #ticket3.brown .explan .chart dl:nth-child(even) dt {
+	background: #b39159;
+}
+.orchestra .box .explan .chart a {
+	color: #b39159;
+	text-decoration: underline;
+}
+.orchestra .box .explan .chart a:hover {
+	text-decoration: none;
+}
+.orchestra .ocTicket .explan .chart .logo {
+	-webkit-justify-content: center; justify-content: center;
+	width: 100%;
+	text-align: center;
+}
+.orchestra .box .explan .linkBox {
+	padding: 40px 0 0;
+}
+.orchestra .box .explan .note {
+	padding-top: 40px;
+}
+.orchestra .ocTicket #ticket1 .explan .note {
+	padding-top: 30px;
+}
+.orchestra .ocGoods {
+	padding: 20px 0 0;
+}
+.orchestra .ocGoods .goodsList {
+	display: -webkit-flex;display: flex;
+	-webkit-flex-wrap: wrap;flex-wrap: wrap;
+}
+.orchestra .ocGoods .goodsList>li {
+	width: 410px;
+}
+.orchestra .ocGoods .goodsList>li:nth-child(n + 3) {
+	margin-top: 30px;
+}
+.orchestra .ocGoods .goodsList>li:nth-child(odd) {
+	margin-right: 20px;
+}
+.orchestra .ocGoods .goodsList .name {
+	padding: .3em 0;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #b75362;
+}
+.orchestra .ocGoods .goodsList .ti3 {
+	padding-left: 3em;
+	text-indent: -3em;
+}
+.orchestra .ocGoods .goodsList .ti4 {
+	padding-left: 4em;
+	text-indent: -4em;
+}
+.orchestra .ocGoods .inner {
+	padding-top: 0;
+}
+.orchestra .ocGoods .box .explan .notice {
+	padding-top: 5px;
+}
+.orchestra .box.darkRed .explan h5.second {
+	margin-top: 65px;
+}
+.orchestra .ocGoods .box {
+	margin-top: 80px;
+}
+.orchestra .box .explan .note
+.orchestra .guide .pd1 {
+	padding-top: 1em;
+}
+.orchestra .guide .title {
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+.orchestra .guide .title2 {
+	font-weight: 500;
+}
+.orchestra .guide .title3 {
+	padding-top: 3em;
+	font-weight: 500;
+}
+.orchestra .guide .textBox {
+	padding-top: 3em;
+	font-size: 1.5rem;
+	line-height: 1.7;
+}
+.orchestra .guide .text {
+	padding-top: 1em;
+}
+.orchestra .guide .list {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.orchestra .guide .textBox a {
+	color: #b39159;
+	text-decoration: underline;
+}
+.orchestra .guide .textBox a:hover {
+	text-decoration: none;
+}
+.orchestra .ocLink {
+	width: 400px;
+	margin: 80px auto 0;
+}
+.orchestra .receptNote {
+	padding-top: 60px;
+	text-align: center;
+	font-size: 1.7rem;
+	font-weight: 500;
+}
+.orchestra .ann {
+	padding-top: 40px;
+	line-height: 1.7;
+}
+.orchestra .annHeading {
+	padding: .8em 2em;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 500;
+	border-top: 1px #292929 solid;
+	border-bottom: 1px #292929 solid;
+}
+.orchestra .ann .annHeading:nth-child(n + 2) {
+	margin-top: 4em;
+}
+.orchestra .ann .dl {
+	border-bottom: #292929 double;
+	font-weight: 500;
+}
+.orchestra .ann a {
+	color: #B39159;
+	text-decoration: underline;
+}
+.orchestra .ann a:hover {
+	text-decoration: none;
+}
+.orchestra .ann .pd1 {
+	padding-top: 1em;
+}
+.orchestra .ann .pd2 {
+	padding-top: 2em;
+}
+.orchestra .ann .pd3 {
+	padding-top: 3em;
+}
+.orchestra .ann .pd4 {
+	padding-top: 4em;
+}
+.orchestra .ann .pdl1 {
+	padding-left: 1em;
+}
+.orchestra .ann .tAR {
+	text-align: right;
+}
+.orchestra .annHdBlack p {
+	padding: .5em;
+	font-weight: 500;
+	color: #FFF;
+	background: #292929;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Footer Contents     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+
+
+
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Media Screen     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*          SP          */
+@media screen and (max-width:767px) {
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Site Contents     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.lowerWrap {
+		padding: 6em 0 0;
+	}
+	.outBorder {
+		min-width: unset;
+		padding-bottom: 4.0em;
+	}
+	.lowerBox {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.innerBorder {
+		padding: 2em 0 0;
+	}
+	.lowerDecoTL, .lowerDecoTR, .lowerDecoBL, .lowerDecoBR {
+		width: 3.5em;
+		height: 3.5em;
+	}
+
+/*          ページタイトル          */
+	.lowerLogo {
+		padding: 2em 4em 1.5em;
+	}
+	.lowerLogo a {
+		width: 85%;
+		max-width: 400px;
+	}
+/*          ページタイトル          */
+	.pageTitleBox {
+		padding-top: 22.4%;
+		background-size: 100% auto;
+	}
+	.pageTitle {
+
+	}
+	.pageTitleVE {
+		width: 50%;
+		max-width: 250px;
+		height: auto;
+		max-height: 66px;
+	}
+	.pageTitleVE::after {
+		padding: 2.5px;
+	}
+	.pageTitleVE .textSvg {
+		width: 80%;
+	}
+	.dir-news .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgNews_sp.jpg);
+	}
+	.dir-story .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgStory_sp.jpg);
+	}
+	.dir-character .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgCharacter_sp.jpg);
+	}
+	.dir-caststaff .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgCaststaff_sp.jpg);
+	}
+	.dir-movie .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgMovie_sp.jpg);
+	}
+	.dir-ticket .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgTicket_sp.jpg);
+	}
+	.dir-music .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgMusic_sp.jpg);
+	}
+	.dir-bddvd .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgBddvd_sp.jpg);
+	}
+	.dir-goods .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgGoods_sp.jpg);
+	}
+	.dir-novelty .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgNovelty_sp.jpg);
+	}
+	.dir-books .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgBooks_sp.jpg);
+	}
+	.ptbsp.pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgSpecial_sp.jpg);
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     ニュースコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* カテゴリー */
+	.newsCategory {
+		width: 100%;
+		margin: 0 auto;
+		padding: 40px 20px;
+	}
+	.category {
+		-webkit-flex-wrap: wrap; flex-wrap: wrap;
+	}
+	.category>li {
+		width: 47%;
+	}
+	.category a {
+		width: 100%;
+		margin: 0 0 13%;
+		font-size: 1.4rem;
+	}
+/* ニュース */
+	.newsList.content {
+		padding: 0;
+	}
+	.newsContentList {
+		padding: 20px;
+	}
+	.newsContentHd .data {
+		font-size: 1.3rem;
+	}
+	.newsTitle {
+		font-size: 1.6rem;
+	}
+	.newsMovie {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+	.newsMovie iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-width: 640px;
+		max-height: 390px;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     ストーリーコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.dir-story .outBorder:before {
+		background-image: url(/img/bg/storyBg_sp.jpg);
+		background-position: 0 10em;
+	}
+	.storyLead02 {
+		margin: 30px auto 0;
+	}
+	.storyText {
+		margin: 50px auto 0;
+		font-size: 1.3rem;
+		line-height: 1.7;
+		text-align: left;
+	}
+	.storyText p:nth-child(n+2) {
+		margin: 30px auto 0;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     キャラクターコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.character.content {
+		width: 100%;
+	}
+	.character .box {
+		display: -webkit-flex; display: flex;
+		max-width: 550px;
+		margin: auto;
+	}
+	.character .container {
+		display: -webkit-flex; display: flex;
+		-webkit-flex-direction: column; flex-direction: column;
+		width: 85%;
+	}
+	.character .box .text {
+		position: unset;
+		width: auto;
+		padding: 1.5em 1em;
+		background: #e8e3d7;
+	}
+	.character .text1 {
+		font-size: 1.2rem;
+	}
+	.character .text2 {
+		font-size: 1rem;
+	}
+.character .box .name {
+		position: unset;
+		transform: unset;
+		width: 15%;
+		padding: 20px 11px;
+}
+.character .charalist {
+		-webkit-flex-direction: column; flex-direction: column;
+		max-width: 550px;
+		margin: auto;
+		padding: 80px 0 0;
+}
+	.character .charalist li {
+		width: 100%;
+	}
+	.character .charalist li:nth-child(2) {
+		padding: 40px 0 0;
+	}
+	.character .charalist li:nth-child(n + 3) {
+		padding: 40px 0 0;
+	}
+	.character .charalist .name {
+		padding: 12px 0;
+	}
+	.character .charalist .text {
+		padding: 10px 0 0;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     スタッフ＆キャストコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.cttStaffCast {
+		padding: 40px 0 0 2em;
+	}
+	.staffcastWrap .flexBox {
+		-webkit-flex-direction: column; flex-direction: column;
+	}
+	.cast {
+		margin: 0;
+	}
+	.staff {
+		margin: 90px 0 0;
+	}
+	.cttStaffCast>li {
+		margin: 0 0 30px;
+	}
+	.cttStaffCast .role {
+		margin: 0 0 .2em;
+		font-size: 1.1rem;
+	}
+	.cttStaffCast .name {
+		font-size: 1.4rem;
+	}
+	.cttStaffCast .name span {
+		font-size: 1rem;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     前売券コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.ticketTitle {
+		width: 100%;
+		margin: 0 auto 25px;
+	}
+	.ticketImg {
+		width: 100%;
+		margin: 25px auto 15px;
+	}
+	.tkFr1, .tkFr2, .tkFr3, .tkFr4 {width:5em;height:5em;}
+	.tkFr1::after, .tkFr2::after, .tkFr3::after, .tkFr4::after {width:4.6em;height:4.6em;}
+	.tkFr1::after {left:.2em;top:.2em;}
+	.tkFr2::after { right:.2em; top:.2em; }
+	.tkFr3::after { right:.2em; bottom:.2em; }
+	.tkFr4::after { left:.2em; bottom:.2em; }
+	.ticketData {
+		width: 100%;
+		margin: 15px auto;
+	}
+	.ticketData>p {
+		font-size: 1.4rem;
+	}
+	.ticketNote {
+		font-size: 1.2rem;
+	}
+	.ticketData .ticket_day {
+		font-size: 1.6rem;
+	}
+	.ticketLink {
+		-webkit-flex-flow: column; flex-flow: column;
+		width: 100%;
+		margin: 0 auto 60px;
+	}
+	.ticketLink li {
+		width: 100%;
+	}
+	.ticketLink li:nth-child(2) {
+		margin-top: 1em;
+	}
+
+	/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     音楽コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.musicList .cttMusic {
+		padding: 80px 0 0;
+	}
+	#music01 {
+		padding: 60px 0 0;
+	}
+	.musicLink {
+		display: block;
+		width: auto;
+	}
+	.musicLink li {
+		width: 70%;
+		max-width: 370px;
+		margin: 0 auto;
+	}
+	.musicLink li:nth-child(n+2) {
+		margin-top: 13px;
+	}
+	.musicTitle {
+		width: 100%;
+	}
+	.musicAr {
+		width: 75%;
+		max-width: 408.5px;
+		margin: 30px auto 0;
+	}
+	.musicJacket {
+		margin: 20px auto 0;
+}
+	.music_con p:nth-child(2) {
+		padding: 20px 0 0;
+	}
+	.musicTxtBox {
+		padding: 20px 0;
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+	.musicIndex .music_conTitle {
+		width: 17%;
+	}
+	.musicPriv .music_conTitle {
+		width: 60%;
+	}
+	.music_tex .heading:nth-child(n+2) {
+		margin: 60px 0 0;
+	}
+	.musicPriv .list li {
+		width: 48%;
+	}
+	.musicPriv .list li:nth-child(n+3) {
+		padding: 25px 0 0;
+	}
+	.musicPriv .list p {
+		font-size: 1rem;
+	}
+	.musicPriv .list li .image {
+		padding: 15px;
+	}
+	.musicNote {
+		margin: 30px auto 0;
+		font-size: 1rem;
+	}
+
+	/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Blu-ray&DVDコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.bddvdTitle {
+		width: 87%;
+		max-width: 484px;
+	}
+	.bddvdRelease {
+		width: 75%;
+		max-width: 376px;
+		margin: 30px auto 0;
+	}
+	.bddvdJacket {
+		margin: 20px auto 0;
+	}
+	.bddvdNet {
+		margin: 20px auto 0;
+	}
+	.bddvdNet p {
+		font-size: .9rem;
+	}
+	.bddvdTxtBox {
+		padding: 20px 0 0;
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+	.bddvd_conTitle {
+		margin: 40px auto 10px 0;
+	}
+	.bddvdSg .bddvd_conTitle {
+		width: 54%;
+		max-width: 185px;
+	}
+	.bddvdSgMov .bddvd_conTitle {
+		width: 66%;
+		max-width: 231.5px;
+	}
+	.bddvdSgVoi .bddvd_conTitle {
+		width: 66%;
+		max-width: 233px;
+	}
+	.bddvdSgSpe .bddvd_conTitle {
+		width: 65%;
+		max-width: 227px;
+	}
+	.bddvdSgOth .bddvd_conTitle {
+		width: 18.5%;
+		max-width: 60px;
+	}
+	.bddvdPriv .bddvd_conTitle {
+		width: 60%;
+		max-width: 205px;
+		margin-top: 70px;
+	}
+	.bddvd_tex {
+		margin: 10px 0 0;
+	}
+	.bddvd_tex>ul .secondary li {
+		font-size: 1.0rem;
+	}
+	.bddvdDolby .box {
+		margin: 4px;
+	}
+	.bddvdDolby .text4 {
+		font-size: 1rem;
+	}
+	.bddvdPriv .list li {
+		width: 48%;
+	}
+	.bddvdPriv .list li:nth-child(n+3) {
+		padding: 25px 0 0;
+	}
+	.bddvdPriv .list li a {
+		display: block;
+		min-height: 3em;
+	}
+	.bddvdPriv .list p {
+		padding: 1em 0 0;
+		font-size: 1rem;
+	}
+	.bddvdPriv .cheer {
+		margin: 40px 0 0;
+	}
+	.bddvdPriv .cheer .comm p {
+		font-size: 1.4rem;
+	}
+	.bddvdPriv .cheer .comm .image {
+		width: 80%;
+		max-width: 280px;
+	}
+	.bddvdPriv .cheer .bddvd_tex {
+		margin: 25px 0 0;
+	}
+	.bddvdNote {
+		margin: 30px auto 0;
+		font-size: 1rem;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     グッズコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.goodsNote {
+	margin: 40px 0 0;
+}
+.goodsOriginList {
+		-webkit-flex-direction: column; flex-direction: column;
+		width: 100%;
+		max-width: 500px;
+		margin: 15px auto 0;
+}
+.goodsOriginList>li {
+	width: 100%;
+	margin: 4em 0 0;
+}
+.goodsPamphlet .goodsOriginList>li {
+	margin: 40px 0 0;
+}
+	.goodsOriginList .image {
+		max-width: 324px;
+		margin: 0 auto;
+	}
+.goodsOriginList .work {
+	padding: 7.5px 0 0;
+}
+.goodsOriginList .name {
+	padding: 7.5px 0 0;
+	font-size: 1.6rem;
+}
+.goodsOriginList .detail {
+	padding: 7.5px 0 0;
+}
+.goodsPamphlet .goodsOriginList .detail {
+	padding: 15px 0 0;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     入場者プレゼントコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.cttNovelty {
+		padding: 80px 0 0;
+	}
+	.cttNovelty:first-child {
+		padding: 0;
+	}
+	.noveltyTitle {
+		padding: 15px 0 0;
+	}
+	.noveltyTitleBox .numberTitle {
+		width: 70%;
+		margin: 0 auto;
+	}
+	.noveltyImage {
+		padding: 20px 0 0;
+	}
+	.noveltyTxtBox {
+		padding: 20px 0 0;
+	}
+	.noveltyTxtBox .priv .novelty_conTitle {
+		width: 27.5%;
+	}
+	.noveltyTxtBox .priv .text {
+		font-size: 1.5rem;
+	}
+	.noveltyTxtBox .priv .text span {
+		font-size: 1.3rem;
+	}
+	.noveltyTxtBox .priv .list {
+		font-size: 1.3rem;
+	}
+	.noveltyTxtBox .period .novelty_conTitle {
+		width: 27%;
+		padding-top: 40px;
+	}
+	.noveltyTxtBox .period .text {
+		font-size: 1.3rem;
+	}
+	.noveltyTxtBox .period .text span, .noveltyTxtBox .priv .text span.small {
+		font-size: 1.1rem;
+	}
+	hr.noveltyLine {
+		margin: 40px 0;
+	}
+	.noveltyTxtBox .note {
+	}
+	.novelty .theaterLink {
+		padding: 30px 0 0;
+		font-size: 1.3rem;
+	}
+
+	/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     動画コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.movieBox {
+		width: 100%;
+	}
+	.movieBox p {
+		font-size: 1.4rem ;
+		padding-top: 10px;
+	}
+	.movieBox div {
+		padding-bottom: 40px;
+	}
+	/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     書籍コンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.booksWrap .content {
+	}
+	.booksDayImage {
+		width: 50%;
+		max-width: 215.5px;
+		margin: 20px auto 0;
+	}
+	.booksImage {
+		width: 100%;
+		margin: 30px auto 80px;
+	}
+	.bookstxt {
+		padding-bottom: 40px;
+	}
+	.bookstxt .esuma {
+		font-size: 1.5rem;
+	}
+	.bookstxt .title {
+		font-size: 1.7rem;
+	}
+	.bookstxt .day {
+		font-size: 1.7rem;
+	}
+	.booksJacket {
+		padding-top: 30px;
+	}
+	.booksTxtBox {
+		width: 100%;
+		max-width: 600px;
+		padding-top: 20px;
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+	.books_conTitle {
+		margin-top: 30px;
+	}
+	.booksBox .list .secondary li {
+		font-size: 1.0rem;
+	}
+	.booksBox1 .booksTxtBox {
+		padding-top: 30px;
+	}
+	.booksSale .books_conTitle, .booksIndex .books_conTitle {
+		width: 28%;
+	}
+	.booksIntro .books_conTitle {
+		width: 47%;
+	}
+	.booksImgBox {
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.booksImgBox li {
+		width: 48%;
+	}
+	.booksImgBox li img {
+		width: 100%;
+	}
+	.booksImgBox li p {
+		padding-top: 5px;
+		font-size: 1.1rem;
+	}
+
+
+	/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     スペシャルコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.specialTitle {
+		font-size: 1.7rem;
+		text-align: left;
+	}
+	.specialSubTitle {
+		font-size: 1.4rem;
+		text-align: left;
+	}
+	.specialIntro {
+		font-size: 1.2rem;
+	}
+	.special01 .specialIntro{
+		width: 100%;
+	}
+	.iconImg {
+		width: 100%;
+		margin: auto;
+	}
+	.iconImg li {
+		width: 24%;
+		margin: 0 0 20px;
+	}
+	.specialBox {
+		width: 100%;
+		max-width: 425px;
+	}
+	.specialBox li {
+		width: 100%;
+	}
+	.specialBox li:nth-child(2), .specialBox li:nth-child(n+3) {
+		padding: 45px 0 0;
+	}
+	.specialBox li .text {
+		height: auto;
+		padding: 10px;
+	}
+	.specialBox li .text p {
+		font-size: 1.4rem;
+	}
+	.dolby .addition {
+		font-size: 1rem;
+	}
+
+	/*+-+-+-+-+-+-+-+-+-+-     comment     -+-+-+-+-+-+-+-+-+-+*/
+	.comment {
+		width: 100%;
+	}
+	/*+-+-+-+-+-+-+-+-+-+-     interview     -+-+-+-+-+-+-+-+-+-+-*/
+
+	.interview {
+		width: 100%;
+	}
+	.interviewTi {
+    	margin: 0 auto 30px;
+	}
+	.interviewBox {
+		padding-bottom: 70px;
+		width: 100%;
+		margin: auto;
+	}
+	.interviewBox .title {
+		font-size: 1.5rem;
+		padding-bottom: 25px;
+	}
+	.interviewBox .txt {
+		font-size: 1.4rem;
+	}
+	.interviewBox .img {
+		padding-top: 25px;
+	}
+	.interviewBox .last {
+		font-size: 1.3rem;
+		text-align: right;
+	}
+	.interview_KV_box {
+		padding: 60px 0 30px;
+	}
+	.interview_KV_box p {
+		font-size: 1.3rem;
+		padding-top: 20px;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-     ライデンシャフトリヒ・タイムス     -+-+-+-+-+-+-+-+-+-+-*/
+	.newspaper {
+		width: 100%;
+		font-size: 1.2rem;
+	}
+	.newspaper .overview {
+		text-align: left;
+	}
+	.newspaper .overview .download a {
+		margin: .5em 0 0;
+		width: 35%;
+		max-width: 170px;
+	}
+	.newspaper .overview .download p {
+		font-size: 1rem;
+	}
+	.newspaper .image03 {
+		width: 80%;
+		max-width: 248px;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-     カウントダウンコメント     -+-+-+-+-+-+-+-+-+-+-*/
+	.countdownList>li {
+		width: 100%;
+		max-width: 600px;
+		padding: 2em 1em;
+		font-size: 1.2rem;
+		line-height: 1.8;
+	}
+	.countdownList>li .name {
+		padding: 0 0 15px;
+	}
+	.countdownList>li.comment09 .ps {
+		-webkit-flex-direction: column; flex-direction: column;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-     バーチャル背景     -+-+-+-+-+-+-+-+-+-+-*/
+	.virtualBg .intro .text {
+		font-size: 1.2rem;
+	}
+	.virtualBg .intro .note {
+		font-size: 1.0rem;
+	}
+	.virtualBg .heading {
+		font-size: 1.3rem;
+	}
+	.virtualBg .box {
+		max-width: 500px;
+		margin: auto;
+	}
+	.virtualBg div.box:nth-of-type(2) {
+		padding: 45px 0 0;
+	}
+	.virtualBgList {
+		-webkit-flex-direction: column; flex-direction: column;
+	}
+	.virtualBgList li {
+		width: 100%;
+		max-width: 600px;
+	}
+	.virtualBgList li:nth-child(n + 2) {
+		padding: 30px 0 0;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-     舞台挨拶レポート     -+-+-+-+-+-+-+-+-+-+-*/
+	.greeting {
+		width: 100%;
+		max-width: 550px;
+		font-size: 1.2rem;
+	}
+	.greeting .pdti3 {
+		padding-left: 0;
+		text-indent: 0;
+	}
+	.greeting .textLink a {
+		padding: 1em;
+	}
+	.greeting .yt {
+		position: relative;
+		padding-bottom: 56.22%;
+		height: 0;
+		overflow: hidden;
+	}
+	.greeting .yt iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-width: 640px;
+		max-height: 390px;
+	}
+	.greeting .imgList {
+		-webkit-flex-direction: column; flex-direction: column;
+		gap: 15px;
+	}
+
+/*+-+-+-+-+-+-+-+-+-+-     制作風景     -+-+-+-+-+-+-+-+-+-+-*/
+	.greeting.making {
+		width: 100%;
+	}
+	.making.greeting .heading {
+		padding-top: 4em;
+		font-size: 1.4rem;
+	}
+
+	/*+-+-+-+-+-+-+-+-+-+-     オーケストラコンサート     -+-+-+-+-+-+-+-+-+-+-*/
+	.cttOrchestra {
+		width: 100%;
+		margin: 0 auto;
+		padding: 3.5em 20px;
+	}
+	.orchestra h3 {
+		width: 60%;
+		margin: auto;
+		padding: 80px 0 30px;
+	}
+	.orchestra .box h4 {
+		padding: .6em;
+		font-size: 1.6rem;
+	}
+	.orchestra .linkBox a {
+		width: 100%;
+	}
+	.orchestra .linkBox a p {
+		padding: .8em 1em;
+	}
+	.orchestra .bd .box {
+		padding: 30px 1em 50px;
+	}
+	.orchestra .bd .release {
+		width: 70%;
+		margin: auto;
+		padding: 20px 0;
+	}
+	.orchestra .bd .detail {
+		padding: 0;
+	}
+	.orchestra .bd .detail .list:first-child {
+		padding-top: 20px;
+	}
+	.orchestra .bd .detail .list:nth-child(n + 2) {
+		padding-top: 1em;
+	}
+	.orchestra .intro .linkBox {
+		padding: 30px 0 0;
+		font-size: 1.4rem;
+	}
+	.orchestra .intro .linkBox a {
+		width: 100%;
+	}
+	.orchestra .intro {
+		padding: 30px 0 0;
+	}
+	.orchestra .intro .img {
+		width: 100vw;
+		margin: 0 calc(50% - 50vw);
+	}
+	.orchestra .ocNews .box {
+		padding: 2em 1em 2em 2em;
+	}
+	.orchestra .ocNews .list {
+		height: 220px;
+	}
+	.orchestra .ocNews .list time {
+		margin: 0 0 2.5px;
+		font-size: 1.1rem;
+	}
+	.orchestra .ocInfo .notice {
+		font-size: 1.2rem;
+	}
+	.orchestra .ocInfo .list {
+		padding: 20px 1em;
+	}
+	.orchestra .ocInfo .list li {
+		font-size: 1.2rem;
+	}
+	.orchestra .ocInfo .box .list li .item {
+		padding: .3em .6em;
+	}
+	.orchestra .ocInfo .box .list li .detail {
+		padding: .3em 0 0 .8em;
+	}
+	.orchestra .ocInfo .box .list li .detail .note {
+		font-size: 1rem;
+	}
+	.orchestra .box .explan .note {
+		font-size: 1rem;
+	}
+	.orchestra .inner {
+		width: 100%;
+		padding: 35px 1em 40px;
+	}
+	.orchestra .ocTicket .overview .name {
+		font-size: 1.4rem;
+	}
+	.orchestra .ocTicket .overview .img {
+		width: 100%;
+	}
+	.orchestra .ocTicket .overview .picture {
+		padding: 30px 1em;
+	}
+	.orchestra .box.darkRed .explan h5 {
+		font-size: 1.3rem;
+	}
+	.orchestra .box .explan .chart dl {
+		-webkit-flex-direction: column; flex-direction: column;
+		min-height: unset;
+	}
+	.orchestra .box .explan .chart dt {
+		width: 100%;
+		padding: .4em 1em;
+	}
+	.orchestra .box .explan .chart dd {
+		width: 100%;
+		padding: 1.5em 1em;
+	}
+	.orchestra .ocTicket .explan .chart .logo img {
+		width: 70%;
+	}
+	.orchestra .ocTicket #ticket3 .overview .note {
+		padding-top: 35px;
+	}
+	.orchestra .box.darkRed .explan h5.second {
+		margin-top: 45px;
+	}
+	.orchestra .ocGoods .goodsList {
+		display: -webkit-flex;display: flex;
+		-webkit-flex-wrap: wrap;flex-wrap: wrap;
+	}
+	.orchestra .ocGoods .goodsList>li {
+		width: 100%;
+	}
+	.orchestra .ocGoods .goodsList>li:nth-child(2) {
+		margin-top: 30px;
+	}
+	.orchestra .ocGoods .goodsList>li:nth-child(odd) {
+		margin-right: 0;
+	}
+	.orchestra .ocGoods .goodsList .name {
+		font-size: 1.4rem;
+	}
+/*	.orchestra .ocGoods .cs {
+		width: 70%;
+		margin: auto;
+	}*/
+	.orchestra .guide .pd1 {
+		padding-top: 1em;
+	}
+	.orchestra .guide .title {
+		font-size: 1.5rem;
+	}
+	.orchestra .guide .title3 {
+		padding-top: 3em;
+		font-weight: 500;
+	}
+	.orchestra .guide .textBox {
+		padding-top: 3em;
+		font-size: 1.2rem;
+	}
+	.orchestra .guide .text {
+		padding-top: 1em;
+	}
+	.orchestra .ocLink {
+		width: 100%;
+		margin: 50px auto 0;
+	}
+	.orchestra .receptNote {
+		padding-top: 30px;
+		font-size: 1.3rem;
+	}
+	.orchestra .annHeading {
+		padding: .8em 1em;
+		font-size: 1.4rem;
+	}
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     Header Contents     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+
+}
+
+/*          PC          */
+@media screen and (min-width:768px) {
+/*          Site Contents          */
+/*          ページタイトル          */
+	.dir-news .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgNews.jpg);
+	}
+	.dir-story .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgStory.jpg);
+	}
+	.dir-character .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgCharacter.jpg);
+	}
+	.dir-caststaff .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgCaststaff.jpg);
+	}
+	.dir-movie .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgMovie.jpg);
+	}
+	.dir-ticket .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgTicket.jpg);
+	}
+	.dir-music .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgMusic.jpg);
+	}
+	.dir-bddvd .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgBddvd.jpg);
+	}
+	.dir-goods .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgGoods.jpg);
+	}
+	.dir-novelty .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgNovelty.jpg);
+	}
+	.dir-books .pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgBooks.jpg);
+	}
+	.ptbsp.pageTitleBox {
+		background-image: url(/img/bg/pageTitleBgSpecial.jpg);
+	}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-     ストーリーコンテンツ     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+	.dir-story .outBorder:before {
+		background-image: url(/img/bg/storyBg.jpg);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

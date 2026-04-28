@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+
+/* -----     ワールドコンテンツ     ----- */
+/*マップ*/
+.worldMapBox {
+	position: relative;
+	width: 963px;
+	margin: auto;
+}
+.worldMap img, .worldMapBtn img { width: 100%; height: auto; vertical-align: top; }
+.worldMapBtnList a {
+	position: absolute;
+	width: 4.154%;
+	height: auto;
+}
+.wmBtn01 { top: 58.565%; left: 11.942%; }
+.wmBtn02 { top: 60.469%; left: 54.244%; }
+.wmBtn03 { top: 70.425%; left: 47.664%; }
+.wmBtn04 { top: 65.447%; left: 57.736%; }
+.wmBtn05 { top: 34.700%; left: 15.992%; }
+.wmBtn06 { top: 63.543%; left: 26.376%; }
+.wmBtn07 { top: 44.363%; left: 26.791%; }
+.wmBtn08 { top: 47.584%; left: 59.294%; }
+.wmBtn09 { top: 50.952%; left: 50.675%; }
+.wmBtn10 { top: 62.079%; left: 67.809%; }
+.wmBtn11 { top: 14.992%; left: 66.500%; }
+.wmBtn12 { top: 56.076%; left: 49.637%; }
+.wmBtn13 { top: 36.164%; left: 43.925%; }
+
+/*スポットリスト*/
+.worldList {
+	display: -webkit-flex; display: flex;
+	-webkit-align-items: stretch; align-items: stretch;
+	-webkit-flex-wrap: wrap; flex-wrap: wrap;
+	margin: 80px 0 0;
+}
+.worldList>li {
+	margin: 0 20px 40px;
+}
+.worldListBtn {
+	display: block;
+	width: 300px;
+	height: 100%;
+	padding: 10px;
+	background: #fffeec;
+}
+.worldListThumbBox {
+	position: relative;
+	overflow: hidden;
+}
+.worldListMore, .worldListMore::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.worldListMore {
+	width: 70px;
+	height: 70px;
+	top: 0;
+	line-height: 65px;
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-size: 14rem;
+	text-align: center;
+	color: #000;
+	background: rgba(255, 254, 236, .85);
+	border-radius: 50%;
+	-webkit-transition: .5s ease-out; transition: .5s ease-out;
+}
+.worldListMore::after {
+	content: "";
+	width: 25px;
+	height: 1px;
+	top: 20px;
+	background: #000;
+	-webkit-transition: .5s ease-out; transition: .5s ease-out;
+}
+.worldListBtn:hover .worldListMore {
+	color: #b4832f;
+}
+.worldListBtn:hover .worldListMore::after {
+	width: 40px;
+	background: #b4832f;
+}
+
+.spot {
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-size: 13rem;
+	text-align: center;
+}
+.spot span {
+	padding: 0 0 0 3px;
+	font-size: 22rem;
+}
+.spotName {
+	color: #000;
+	font-size: 15rem;
+	text-align: center;
+}
+
+/*スポット詳細*/
+.spotDetailBox {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(239, 238, 217, .9);
+	overflow: auto;
+	z-index: 9999;
+}
+.spotDetailFrame {
+	position: absolute;
+	width: 720px;
+	top: 100%;
+	left: 0;
+	right: 0;
+	padding: 3px;
+	margin: 65px auto 240px;
+	background: #efeed9;
+	border: 2px #b4832f solid;
+}
+.spotDetail {
+	padding: 34px;
+	border: 1px #b4832f solid;
+}
+.spotDetailCreate {
+	padding: 5px 0 0;
+	text-align: center;
+}
+.spotDetailStill {
+	padding: 30px 0 0;
+}
+.spotDetailSpace {
+	padding: 15px 0;
+}
+.spotDetailTxt {
+	font-size: 16rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}
+.spotDetailSetImg {
+	float: right;
+	width: 50%;
+	margin: .2em 0 0 1em;
+}
+.spotDetailMap {
+	text-align: right;
+}
+.spotCloseBtn {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	bottom: -75px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.spotCloseBtn:before, .spotCloseBtn:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 50%;
+	background: #b4832f;
+}
+.spotCloseBtn:before {
+	-webkit-transform: rotate(45deg); transform: rotate(45deg);
+}
+.spotCloseBtn:after {
+	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+}
+
+
+
+
+/* ---------- media screen ---------- */
+@media screen and (max-width: 768px) {
+
+/* -----     ワールドコンテンツ     ----- */
+	/*マップ*/
+	.worldMapBox {
+		width: 100%;
+	}
+	/*スポットリスト*/
+	.worldList {
+		margin: 40px 1% 0;
+	}
+	.worldList>li {
+		width: 48%;
+		margin: 0 1% 2%;
+	}
+	.worldListBtn {
+		width: 100%;
+	}
+	.worldListMore {
+		width: 50px;
+		height: 50px;
+		line-height: 45px;
+		font-size: 12rem;
+	}
+	.spot, .spotName {
+		text-align: left;
+	}
+	/*スポット詳細*/
+	.spotDetailFrame {
+		width: 94%;
+		margin: 3% auto 200px;
+	}
+	.spotDetail {
+		padding: 5%;
+	}
+	.spotDetailCreate {
+		font-size: 12rem;
+	}
+	.spotDetailStill {
+		padding: 15px 0 0;
+	}
+	.spotDetailTxt {
+		font-size: 15rem;
+		letter-spacing: 0;
+	}
+	.spotDetailSetImg {
+		float: none;
+		width: 100%;
+		margin: 15px 0;
+	}
+
+}
+
+@media screen and (max-width: 320px) {}
+
+
+

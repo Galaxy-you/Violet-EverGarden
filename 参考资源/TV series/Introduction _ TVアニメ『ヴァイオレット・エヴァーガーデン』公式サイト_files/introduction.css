@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+
+/* -----     イントロダクションコンテンツ     ----- */
+#dir-introduction .mainWrap {
+	background: url(/img/introduction/introBG.jpg) no-repeat center top;
+	background-size: contain;
+}
+.intro1 .introTxt {
+	font-size: 17rem;
+	line-height: 2;
+} 
+.intro1 img {
+	margin: 0 auto 40px;
+}
+.intro2 img {
+	margin: 30px auto 0;
+}
+.introTxt {
+	font-size: 16rem;
+	text-align: center;
+	padding: 0 0 30px;
+	line-height: 1.8;
+}
+.introTxt span {
+	font-size: 13rem;
+}
+
+
+
+/* ---------- media screen ---------- */
+@media screen and (max-width: 768px) {
+
+/* -----     イントロダクションコンテンツ     ----- */
+	.introductionContent .cttBox {
+		padding: 30px 0 30px;
+	}
+	.introTxt {
+		padding: 0 1em 20px;
+		text-align: left;
+	}
+	.intro1 .introTxt {
+		font-size: 16rem;
+		line-height: 1.8;
+	}
+	.intro1 img {
+		margin: 0 auto 20px;
+		padding: 0 4em 0 1em;
+	}
+	.intro2 img {
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+
+
+}
+
+@media screen and (max-width: 320px) {}
+
+
+

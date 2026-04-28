@@ -1,0 +1,51 @@
+
+hashCheck = location.hash;
+
+function hashIN(){
+	urlCheck = location.hash;
+	if(urlCheck != ""){
+		$('.subNavigationList a').removeClass('subNaviCur');
+		$('.subNavigationList a').each(function(){
+			var activeNav = $(this).attr('href');
+			if(activeNav == urlCheck){
+				$(this).addClass('subNaviCur');
+			}
+		});
+		$('.dataLoad').removeClass('active');
+		$(".dataLoad").each(function(){
+			var dataLoadId = $(this).attr('id');
+			if(urlCheck == dataLoadId){
+				$('.dataLoad').stop().animate({opacity: 0},300,'easeOutCubic').queue(function(){ $(this).css('top','30px'); });
+				$(this).addClass('active');
+				setTimeout(function(){$('.dataLoad.active').stop().animate({opacity: 1, top:'0px'},1000,'easeOutCubic');},600);
+			}
+		});
+		
+	}
+}
+
+
+$('.subNavigationList a').on('click', function(){
+	hashCheck = $('.subNaviCur').attr('href');
+	var clickHash = $(this).attr('href');
+	if(clickHash != hashCheck){
+		$('.subNavigationList a').removeClass('subNaviCur');
+		$(this).addClass('subNaviCur');
+
+		$('.dataLoad').removeClass('active');
+		$(".dataLoad").each(function(){
+			var dataLoadId = $(this).attr('id');
+			if(clickHash == dataLoadId){
+				$('.dataLoad').stop().animate({opacity: 0},300,'easeOutCubic').queue(function(){ $(this).css('top','30px'); });
+				$(this).addClass('active');
+				setTimeout(function(){$('.dataLoad.active').stop().animate({opacity: 1, top:'0px'},1000,'easeOutCubic');},600);
+			}
+		});
+		location.hash = clickHash;
+	}
+});
+
+$(window).on("load", function(){
+	hashIN();
+});
+	

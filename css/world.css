@@ -1,0 +1,86 @@
+.world-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.world-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.world-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(20 18 15 / 62%) 0%, rgb(20 18 15 / 48%) 100%);
+}
+
+.world-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.world-hero-content h1 {
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.world-hero-content p {
+  color: rgb(255 255 255 / 90%);
+  max-width: 680px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  color: #564b3a;
+}
+
+.chip.active {
+  border-color: var(--brand);
+  background: rgb(179 145 89 / 12%);
+  color: #4a3819;
+}
+
+.world-grid {
+  align-items: start;
+}
+
+.world-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.world-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.world-card-text {
+  padding: 0.95rem 1rem 1.1rem;
+}
+
+.world-card.hidden {
+  display: none;
+}

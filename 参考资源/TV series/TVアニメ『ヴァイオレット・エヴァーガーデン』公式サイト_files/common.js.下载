@@ -1,0 +1,49 @@
+	//anchor link
+	$('a[href^="#"]').on('click',function(){
+		var speed = 600;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		if( !$(target).get(0) ){ return false; }
+		var position = target.offset().top;
+		$("html, body").animate({scrollTop:position}, speed, "easeOutQuad");
+		if($('.wtNavigation').hasClass('show')) {
+			$('.wtNavigation, .worldtourContents').removeClass('show').addClass('close');}
+		return false;
+	});
+
+	//pagetop set
+	var topBtn = $('.pagetop');
+	topBtn.hide();
+	function scrollEvent() {
+		var scTp = $(window).scrollTop();
+		(scTp > 300) ? topBtn.fadeIn() : topBtn.fadeOut();
+	}
+
+	//メニュー表示非表示
+	$('#navigationBtn').on('click', function() {
+		if($('.naviBtn').hasClass('show')) {
+			$('.naviBtn, .navigationWrap').removeClass('show');
+		}else{
+			$('.naviBtn, .navigationWrap').addClass('show');
+		}
+	});
+
+	$('.wtNavigation').mouseenter(function(){
+		$('.wtNavigation, .worldtourContents').removeClass('close').addClass('show');
+	}).mouseleave(function(){
+		$('.wtNavigation, .worldtourContents').removeClass('show').addClass('close');
+	});
+
+	$('.wtNavigation').on('click', function() {
+		if($('.wtNavigation').hasClass('show')) {
+			$('.wtNavigation, .worldtourContents').removeClass('show').addClass('close');
+		}else{
+			$('.wtNavigation, .worldtourContents').removeClass('close').addClass('show');
+		}
+	});
+
+	//scroll event
+	$(window).on('load scroll', function() {
+		scrollEvent();
+	});
+

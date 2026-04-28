@@ -1,0 +1,132 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgb(138 103 47 / 15%);
+}
+
+.header-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+  font-size: 1.08rem;
+  color: #2c261d;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a,
+.main-nav .nav-soon {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+.main-nav a.active {
+  background: rgb(179 145 89 / 15%);
+  color: #513e1f;
+}
+
+.nav-soon {
+  color: #8f877a;
+  border: 1px dashed rgb(143 135 122 / 50%);
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  background: var(--brand);
+  color: #fff;
+  padding: 0.75rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--brand-strong);
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.site-footer {
+  border-top: 1px solid rgb(138 103 47 / 18%);
+  background: #f3ede1;
+}
+
+.footer-inner {
+  padding: 1.2rem 0 1.8rem;
+}
+
+.footer-inner p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    padding-bottom: 0.8rem;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0.7rem;
+  }
+}

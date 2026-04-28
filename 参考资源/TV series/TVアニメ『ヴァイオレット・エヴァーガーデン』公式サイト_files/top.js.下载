@@ -1,0 +1,39 @@
+	//映像のサイズ調整
+	function movieSet(wW) {
+		var curH = 1080*wW/1920;
+		(wW <= 1200)? curH = 675 : curH = curH;
+		if(wW <= 768){
+			curW = 1920*$('.movieWrap').height()/1080;
+			$('#youtube-movie').css({'width':curW+'px','height':'100%'});
+		} else {
+			$('#youtube-movie').css({'width':'100%','height':curH+'px'});
+		}
+	}
+	
+	
+	$(window).on('load', function(){
+		var wW = $(document).width();
+		//映像のサイズ調整
+		movieSet(wW);
+		$('#overlay').fadeOut(800, function(){
+			$('.mainWrap').addClass('kvMv');
+			
+			$('.loadImg').colorbox({width:"100%", height:"100%", maxWidth:1160, maxHeight:723, opacity:.9, open:true});
+			
+			
+		});
+	});
+	
+	$('.top_slider').slick({
+		pauseOnHover: false,
+		pauseOnFocus: false,
+		autoplay: true,
+		arrows: false,
+		initialSlide: 0,
+		fade: true,
+		draggable: false,
+		autoplaySpeed: 4000,
+		speed: 4000,
+		dots: true,
+		lazyLoad: 'progressive',
+	});
