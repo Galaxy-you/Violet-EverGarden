@@ -81,6 +81,10 @@
   margin-bottom: 0;
 }
 
+.local-video {
+  margin-top: 0.75rem;
+}
+
 .video-card {
   padding: 0.95rem 1rem 1rem;
 }
@@ -92,7 +96,8 @@
   background: #ddd2c2;
 }
 
-.video-frame iframe {
+.video-frame iframe,
+.video-frame video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;

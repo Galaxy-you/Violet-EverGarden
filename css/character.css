@@ -89,6 +89,28 @@
   color: #5d513d;
 }
 
+.arc-panel {
+  margin-top: 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+  background: #faf5eb;
+}
+
+.arc-panel h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+}
+
+.arc-panel ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.arc-panel li + li {
+  margin-top: 0.35rem;
+}
+
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +222,8 @@
 
 :root[data-theme="dark"] .violet-media,
 :root[data-theme="dark"] .char-card img,
-:root[data-theme="dark"] .tag-list li {
+:root[data-theme="dark"] .tag-list li,
+:root[data-theme="dark"] .arc-panel {
   background: #212b38;
 }
 
