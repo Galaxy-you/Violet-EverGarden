@@ -130,6 +130,39 @@
   padding: 0.95rem 1rem 1.1rem;
 }
 
+.album-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.album-head h3 {
+  margin: 0;
+}
+
+.album-play-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #f8f2e6;
+  color: #5c4729;
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.95rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.album-play-btn:hover,
+.album-play-btn.is-playing {
+  border-color: var(--brand);
+  color: #fff;
+  background: var(--brand);
+}
+
 .album-text p {
   margin-bottom: 0;
 }
@@ -168,6 +201,11 @@
 :root[data-theme="dark"] .album-card img,
 :root[data-theme="dark"] .video-frame {
   background: #212b38;
+}
+
+:root[data-theme="dark"] .album-play-btn {
+  background: #212b38;
+  color: #e9cc9a;
 }
 
 :root[data-theme="dark"] .video-card a,

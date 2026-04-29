@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -100,49 +100,66 @@
           <article class="album-card">
             <img src="../assets/images/tv_series/automemories.jpg" alt="Automemories">
             <div class="album-text">
-              <h3>VIOLET EVERGARDEN: Automemories</h3>
+              <div class="album-head">
+                <h3>VIOLET: Automemories</h3>
+                <button class="album-play-btn" type="button" data-audio="../assets/videos/Theme of Violet Evergarden - Evan Call.mp3" aria-label="播放专辑示例音乐">▶</button>
+              </div>
               <p>TV 原声 2CD，收录大量主配乐与短版歌曲，是理解系列音乐语言的核心入口。</p>
             </div>
           </article>
           <article class="album-card">
             <img src="../assets/images/tv_series/songletters.jpg" alt="Song letters">
             <div class="album-text">
-              <h3>Song letters</h3>
+              <div class="album-head">
+                <h3>Song letters</h3>
+                <button class="album-play-btn" type="button" data-audio="../assets/videos/TRUE - Sincerely.mp3" aria-label="播放专辑示例音乐">▶</button>
+              </div>
               <p>TV 声乐合辑，包含 OP/ED 与多首插曲完整版，也收录不同语言版本的 <code>Violet Snow</code>。</p>
             </div>
           </article>
           <article class="album-card">
             <img src="../assets/images/剧场版/music01Jacket.jpg" alt="WILL">
             <div class="album-text">
-              <h3>Theme Song: WILL</h3>
+              <div class="album-head">
+                <h3>Theme Song: WILL</h3>
+                <button class="album-play-btn" type="button" data-audio="../assets/videos/will.mp3" aria-label="播放专辑示例音乐">▶</button>
+              </div>
               <p>剧场版主题曲，延续系列一贯的温柔表达，让“告白与告别”更具仪式感。</p>
             </div>
           </article>
           <article class="album-card">
             <img src="../assets/images/剧场版/music02Jacket.jpg" alt="Echo Through Eternity">
             <div class="album-text">
-              <h3>Echo Through Eternity</h3>
+              <div class="album-head">
+                <h3>Echo Through Eternity</h3>
+                <button class="album-play-btn" type="button" data-audio="../assets/videos/エイミー.mp3" aria-label="播放专辑示例音乐">▶</button>
+              </div>
               <p>剧场版原声 3CD，串联 TV、外传与终章的情绪主轴，是系列音乐的全面总结。</p>
             </div>
           </article>
           <article class="album-card">
             <img src="../assets/images/剧场版/music03Jacket.jpg" alt="Letters and Doll">
             <div class="album-text">
-              <h3>Letters and Doll</h3>
+              <div class="album-head">
+                <h3>Letters and Doll</h3>
+                <button class="album-play-btn" type="button" data-audio="../assets/videos/路标.mp3" aria-label="播放专辑示例音乐">▶</button>
+              </div>
               <p>剧场版声乐合辑，围绕“回望记忆”展开，曲目编排很有叙事性。</p>
             </div>
           </article>
           <article class="album-card">
             <img src="../assets/images/剧场版/music04Jacket.jpg" alt="Piano Memories">
             <div class="album-text">
-              <h3>Piano Memories</h3>
+              <div class="album-head">
+                <h3>Piano Memories</h3>
+                <button class="album-play-btn" type="button" data-audio="../assets/videos/Theme of Violet Evergarden - Evan Call.mp3" aria-label="播放专辑示例音乐">▶</button>
+              </div>
               <p>钢琴改编专辑，将系列名曲以更纯粹的方式呈现，适合安静聆听与回味剧情。</p>
             </div>
           </article>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -153,5 +170,56 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll(".album-play-btn");
+      if (!buttons.length) return;
+
+      var currentAudio = null;
+      var currentButton = null;
+
+      function resetButton(btn) {
+        btn.classList.remove("is-playing");
+        btn.textContent = "▶";
+        btn.setAttribute("aria-label", "播放专辑示例音乐");
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var src = btn.getAttribute("data-audio");
+          if (!src) return;
+
+          if (currentButton && currentButton !== btn) {
+            resetButton(currentButton);
+          }
+          if (currentAudio && currentButton !== btn) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+          }
+
+          if (!currentAudio || currentButton !== btn) {
+            currentAudio = new Audio(src);
+            currentButton = btn;
+            currentAudio.addEventListener("ended", function () {
+              if (currentButton) resetButton(currentButton);
+              currentAudio = null;
+              currentButton = null;
+            });
+          }
+
+          if (currentAudio.paused) {
+            currentAudio.play();
+            btn.classList.add("is-playing");
+            btn.textContent = "⏸";
+            btn.setAttribute("aria-label", "暂停专辑示例音乐");
+          } else {
+            currentAudio.pause();
+            resetButton(btn);
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
