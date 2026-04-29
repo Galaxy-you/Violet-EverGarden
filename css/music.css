@@ -24,6 +24,10 @@
   position: relative;
   z-index: 2;
   color: #fff;
+  margin: 0 0 0 auto;
+  max-width: 700px;
+  text-align: right;
+  padding-right: clamp(1.2rem, 4vw, 3rem);
 }
 
 .music-hero-content h1 {

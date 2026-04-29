@@ -1,6 +1,0 @@
-	//colorbox
-	$('a[rel="movie"]').colorbox({iframe:true, width:"100%", height:"100%", maxWidth:1280, maxHeight:790, opacity:.9});
-	
-	//colorbox img
-	$('a[rel="img"]').colorbox({maxWidth:'100%',maxHeight:'100%', opacity:.9});
-

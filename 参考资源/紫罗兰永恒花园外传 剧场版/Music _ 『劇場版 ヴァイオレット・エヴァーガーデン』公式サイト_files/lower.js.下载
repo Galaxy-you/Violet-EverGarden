@@ -1,4 +1,0 @@
-	//load event
-	jQuery.event.add(window,"load",function() {
-		$('#overlay').fadeOut(800);
-	});
