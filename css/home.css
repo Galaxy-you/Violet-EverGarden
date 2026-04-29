@@ -126,6 +126,18 @@
   margin-bottom: 0.65rem;
 }
 
+:root[data-theme="dark"] .hero-media img {
+  filter: saturate(0.82) contrast(1.05) brightness(0.86);
+}
+
+:root[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(100deg, rgb(7 10 14 / 74%) 0%, rgb(7 10 14 / 48%) 48%, rgb(7 10 14 / 66%) 100%);
+}
+
+:root[data-theme="dark"] .gallery-item {
+  background: var(--surface);
+}
+
 @media (max-width: 900px) {
   .hero-content {
     text-align: left;

@@ -182,6 +182,38 @@
   box-shadow: var(--shadow);
 }
 
+:root[data-theme="dark"] .character-hero img {
+  filter: brightness(0.85) saturate(0.83);
+}
+
+:root[data-theme="dark"] .character-hero-overlay {
+  background: linear-gradient(110deg, rgb(7 10 14 / 74%) 0%, rgb(7 10 14 / 54%) 62%, rgb(7 10 14 / 68%) 100%);
+}
+
+:root[data-theme="dark"] .violet-focus,
+:root[data-theme="dark"] .chip,
+:root[data-theme="dark"] .char-card,
+:root[data-theme="dark"] .relation-card,
+:root[data-theme="dark"] .quote-wall blockquote {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .violet-media,
+:root[data-theme="dark"] .char-card img,
+:root[data-theme="dark"] .tag-list li {
+  background: #212b38;
+}
+
+:root[data-theme="dark"] .meta,
+:root[data-theme="dark"] .tag-list li,
+:root[data-theme="dark"] .chip {
+  color: var(--text-soft);
+}
+
+:root[data-theme="dark"] .chip.active {
+  color: #f2d9ad;
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;

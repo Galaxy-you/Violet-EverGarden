@@ -85,6 +85,21 @@
   display: none;
 }
 
+.world-map-panel {
+  margin: 1rem 0 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.world-map-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .system-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -107,6 +122,29 @@
 
 .extension-text {
   padding: 0.95rem 1rem 1.15rem;
+}
+
+:root[data-theme="dark"] .world-hero img {
+  filter: brightness(0.86) saturate(0.84);
+}
+
+:root[data-theme="dark"] .world-hero-overlay {
+  background: linear-gradient(180deg, rgb(8 11 15 / 72%) 0%, rgb(8 11 15 / 56%) 100%);
+}
+
+:root[data-theme="dark"] .chip,
+:root[data-theme="dark"] .world-card,
+:root[data-theme="dark"] .extension-card,
+:root[data-theme="dark"] .world-map-panel {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .chip {
+  color: var(--text-soft);
+}
+
+:root[data-theme="dark"] .chip.active {
+  color: #f2d9ad;
 }
 
 @media (max-width: 980px) {

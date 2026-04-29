@@ -167,6 +167,36 @@
   margin-bottom: 0.6rem;
 }
 
+:root[data-theme="dark"] .story-hero img {
+  filter: brightness(0.85) saturate(0.84);
+}
+
+:root[data-theme="dark"] .story-hero-overlay {
+  background: linear-gradient(120deg, rgb(7 10 14 / 72%) 0%, rgb(7 10 14 / 52%) 58%, rgb(7 10 14 / 68%) 100%);
+}
+
+:root[data-theme="dark"] .story-lead-grid img,
+:root[data-theme="dark"] .story-line-card img,
+:root[data-theme="dark"] .scene-card img {
+  background: #212b38;
+}
+
+:root[data-theme="dark"] .dot,
+:root[data-theme="dark"] .timeline-content,
+:root[data-theme="dark"] .story-line-card,
+:root[data-theme="dark"] .scene-card {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .dot {
+  border-color: var(--line);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .timeline::before {
+  background: rgb(198 161 103 / 36%);
+}
+
 @media (max-width: 900px) {
   .story-lead-grid {
     grid-template-columns: 1fr;

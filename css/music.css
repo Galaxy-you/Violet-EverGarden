@@ -145,6 +145,31 @@
   text-underline-offset: 2px;
 }
 
+:root[data-theme="dark"] .music-hero img {
+  filter: brightness(0.84) saturate(0.84);
+}
+
+:root[data-theme="dark"] .music-hero-overlay {
+  background: linear-gradient(120deg, rgb(7 10 14 / 73%) 0%, rgb(7 10 14 / 53%) 55%, rgb(7 10 14 / 68%) 100%);
+}
+
+:root[data-theme="dark"] .single-card,
+:root[data-theme="dark"] .video-card,
+:root[data-theme="dark"] .album-card {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .single-card img,
+:root[data-theme="dark"] .album-card img,
+:root[data-theme="dark"] .video-frame {
+  background: #212b38;
+}
+
+:root[data-theme="dark"] .video-card a,
+:root[data-theme="dark"] .yt-links a {
+  color: #e9cc9a;
+}
+
 @media (max-width: 900px) {
   .single-grid,
   .video-grid {
